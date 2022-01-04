@@ -4,22 +4,58 @@ use colored::*;
 use terminal_size::{Width, Height, terminal_size};
 use rand::thread_rng;
 use rand::Rng;
+use clap::{Arg, App};
 
 fn main() {
-    let parsed = json::parse(&fs::read_to_string("flags.json").unwrap()).unwrap();
-    let flag = std::env::var("FLAG").unwrap();
-    let mut flag = flag.as_str();
+
+    let matches = App::new("cli-pride-flags-rs")
+        .version("0.1.0")
+        .author("Amy <axtlos@tar.black>")
+        .about("A CLI tool to generate pride flags")
+        .arg(Arg::with_name("flag")
+            .short("F")
+            .long("flag")
+            .value_name("FLAG")
+            .help("Sets the flag to use")
+            .takes_value(true)
+            .required(true)
+            .index(1))
+        .arg(Arg::with_name("file")
+            .short("f")
+            .long("file")
+            .value_name("FILE")
+            .help("Sets a custom lson file to use")
+            .takes_value(true))
+        .arg(Arg::with_name("width")
+            .short("w")
+            .long("width")
+            .value_name("WIDTH")
+            .help("Sets the width of the pride flag")
+            .takes_value(true))
+        .arg(Arg::with_name("height")
+            .short("h")
+            .long("height")
+            .value_name("HEIGHT")
+            .help("Sets the height of the pride flag")
+            .takes_value(true))
+        .get_matches();
+        
+
+    let mut flag = matches.value_of("flag").unwrap();
+    let flags = json::parse(&fs::read_to_string(matches.value_of("file").unwrap_or("flags.json")).unwrap()).unwrap();
     let size = terminal_size();
-    let flags = vec!["agen", "aro", "asex", "bi", "bigen", "classic", "enby", "fluid", "les", "pan", "queer", "trans"];
-    let mut rng = thread_rng();
-    if flag == "random" {
-        let y: usize = rng.gen_range(0, flags.len());
-        flag = flags[y];
+    let mut available_flags: Vec<&str> = Vec::new();
+    for i in flags.entries() {
+        available_flags.push(i.0)
     }
-    let len = parsed[flag].len();
+    if flag == "random" {
+        let y: usize = thread_rng().gen_range(0, flags.len());
+        flag = available_flags[y];
+    }
+    let len = flags[flag].len();
     let mut flag_height = 0;
     for i in 0..len.clone() {
-        flag_height += parsed[flag][i]["height"].as_u16().unwrap() as usize;
+        flag_height += flags[flag][i]["height"].as_u16().unwrap() as usize;
     }
     if let Some((Width(mut w), Height(h))) = size {
         let multiplier: usize;
@@ -36,8 +72,8 @@ fn main() {
             w = std::env::var("WIDTH").unwrap().parse::<u16>().unwrap();
         }
         for i in 0..len.clone() {
-            for _j in 0..parsed[flag][i]["height"].as_usize().unwrap()*multiplier {
-                let rgb1 = colorsys::Rgb::from_hex_str(parsed[flag][i]["code"].as_str().unwrap()).unwrap();
+            for _j in 0..flags[flag][i]["height"].as_usize().unwrap()*multiplier {
+                let rgb1 = colorsys::Rgb::from_hex_str(flags[flag][i]["code"].as_str().unwrap()).unwrap();
                 let red = rgb1.red() as u8;
                 let blue = rgb1.blue() as u8;
                 let green = rgb1.green() as u8;
