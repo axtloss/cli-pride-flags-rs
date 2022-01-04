@@ -39,5 +39,5 @@ output the enby flag with a custom width: <br>
 output the classic pride flag with both a custom height and width: <br>
 `cli-pride-flags-rs -w 10 -h 10 classic`
 
-`output a custom flag from a custom json file` <br>
+output a custom flag from a custom json file <br>
 `cli-pride-flags-rs -f custom.json -w 10 -h 10 <name of flag>`
