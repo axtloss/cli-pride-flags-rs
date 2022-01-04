@@ -1,0 +1,13 @@
+/home/amy/cli-pride-flags-rs/target/debug/deps/quote-c6454fae9192dd1d.rmeta: /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/lib.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ext.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/format.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ident_fragment.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/to_tokens.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/runtime.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/spanned.rs
+
+/home/amy/cli-pride-flags-rs/target/debug/deps/libquote-c6454fae9192dd1d.rlib: /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/lib.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ext.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/format.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ident_fragment.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/to_tokens.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/runtime.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/spanned.rs
+
+/home/amy/cli-pride-flags-rs/target/debug/deps/quote-c6454fae9192dd1d.d: /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/lib.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ext.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/format.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ident_fragment.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/to_tokens.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/runtime.rs /home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/spanned.rs
+
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/lib.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ext.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/format.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/ident_fragment.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/to_tokens.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/runtime.rs:
+/home/amy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.14/src/spanned.rs:
