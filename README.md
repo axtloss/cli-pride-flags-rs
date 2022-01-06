@@ -33,7 +33,7 @@ output the trans flag with the terminal width and automatic height: <br>
 `cli-pride-flags-rs trans`
 
 output the bi flag with a custom height: <br>
-`cli-pride-flags-rs -h 10 trans`
+`cli-pride-flags-rs -h 10 bi`
 
 output the enby flag with a custom width: <br>
 `cli-pride-flags-rs -w 10 enby`
