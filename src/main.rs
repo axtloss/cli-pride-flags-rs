@@ -2,8 +2,7 @@ use std::fs;
 use json;
 use colored::*;
 use terminal_size::{Width, Height, terminal_size};
-use rand::thread_rng;
-use rand::Rng;
+use rand::{Rng, thread_rng};
 use clap::{Arg, App};
 
 fn main() {
@@ -43,7 +42,6 @@ fn main() {
 
     let mut flag = matches.value_of("flag").unwrap();
     let flags = json::parse(&fs::read_to_string(matches.value_of("file").unwrap_or("flags.json")).unwrap()).unwrap();
-    let size = terminal_size();
     let mut available_flags: Vec<&str> = Vec::new();
     for i in flags.entries() {
         available_flags.push(i.0)
@@ -57,7 +55,7 @@ fn main() {
     for i in 0..len.clone() {
         flag_height += flags[flag][i]["height"].as_u16().unwrap() as usize;
     }
-    if let Some((Width(mut w), Height(h))) = size {
+    if let Some((Width(mut w), Height(h))) = terminal_size() {
         let multiplier: usize;
         match std::env::var("HEIGHT").unwrap_or("".to_string()).as_str() {
             "" => {
