@@ -23,7 +23,7 @@ fn main() {
             .short("f")
             .long("file")
             .value_name("FILE")
-            .help("Sets a custom lson file to use")
+            .help("Sets a custom json file to use")
             .takes_value(true))
         .arg(Arg::with_name("width")
             .short("w")
